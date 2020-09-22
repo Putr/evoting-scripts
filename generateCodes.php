@@ -1,5 +1,8 @@
 <?php
 
+//
+// SETUP AND CONFIGURATION
+//
 $options = getopt("", ["count:"]);
 
 if (!$options['count'] || !is_numeric($options['count'])) {
@@ -8,21 +11,29 @@ if (!$options['count'] || !is_numeric($options['count'])) {
 
 $total = (int) $options['count'];
 
+
+//
+// CODE GENERATION
+//
 $codes = [];
-for ($i = 1; $i < $total; $i++) {
+for ($i = 1; $i <= $total; $i++) {
     $codes[] = getRandomString(3);
 }
 
+//
+// SAVING TO CSV
+//
 $date = new \DateTime();
 $fp = fopen(sprintf('voting_codes_%s.csv', time()), 'w');
-
 foreach ($codes as $fields) {
     fputcsv($fp, [$fields]);
 }
-
 fclose($fp);
 
+// END
 die(sprintf("Generated %s codes" . PHP_EOL, $total));
+
+
 
 //
 // Utility

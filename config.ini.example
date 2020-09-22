@@ -1,0 +1,16 @@
+; Insert your "From" address.
+; This address must be verified with Amazon SES.
+SENDER=
+SENDER_NAME=
+
+; Insert your Amazon SES SMTP user name.
+SMTP_USERNAME=
+
+; Insert your Amazon SES SMTP password.
+SMTP_PASS=
+
+; If you're using Amazon SES in a region other than US West (Oregon),
+; replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP
+; endpoint in the appropriate region.
+SES_HOST = ;
+SES_PORT = ;

@@ -1,0 +1,7 @@
+Pozdravljeni!
+
+To je glasnovnica. Kliknite na ta link:
+
+http://url.si/test/%%CODE%%
+
+Nasvidenje!
